@@ -1,3 +1,5 @@
+import './index.css';
+
 var distance = 0;
 var lastPos = [0, 0]
 var el;
@@ -19,5 +21,4 @@ document.addEventListener("mousemove", function(e){
   el.style.color = "#"+((1<<24)*Math.random()|0).toString(16);
   lastPos = [e.x, e.y]
 });
-
 });
