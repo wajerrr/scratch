@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 const MAX = 100000;
 
 div = document.createElement("DIV");
-div.style.backgroundColor = "#000";
+div.style.backgroundColor = "#fff";
 document.body.appendChild(div);
 div.style.height= "100%";
 div.style.width= "0";
@@ -33,9 +33,13 @@ document.addEventListener("mousemove", function(e){
   var dist = Math.sqrt(res);
   distance +=  Math.round(dist);
   el.innerHTML = "distance traveled: " + distance + " px";
+  var percent  = (distance / MAX) * 100;
   // document.body.style.backgroundColor = "#"+((1<<24)*Math.random()|0).toString(16);
   // el.style.color = "#"+((1<<24)*Math.random()|0).toString(16);
-  div.style.width =  (distance / MAX) * 100 + '%';
+  //console.log(Math.round(256 - (256 * percent) / 100 ).toString(16));
+  const col = Math.round(256 - (256 * percent) / 100 ).toString(16);
+  div.style.backgroundColor = `#${col}${col}${col}`;
+  div.style.width =  percent + '%';
   lastPos = [e.x, e.y]
 });
 });

@@ -3,4 +3,5 @@ body {
     padding: 0;
     height: 100vh;
     position: relative;
+    overflow: hidden;
 }
