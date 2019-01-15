@@ -1,0 +1,25 @@
+{
+  "name": "scratch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel ./html/index.html",
+    "build": "parcel build ./html/index.html",
+    "build:prod": "npm i && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wajerrr/scratch.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wajerrr/scratch/issues"
+  },
+  "homepage": "https://github.com/wajerrr/scratch#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.11.0"
+  }
+}
